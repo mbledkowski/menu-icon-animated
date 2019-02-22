@@ -1,0 +1,17 @@
+<div id="headerMenuBurger">
+  <style>
+    #burgerIcon, #burgerIcon::before, #burgerIcon::after{transition: 0.2s transform ease-out;}
+    #burgerIcon::before, #burgerIcon::after{content: ""; display: block; transform-origin: center left; background: black; width: 50px; height: 6px; border-radius: 10px;}
+    #burgerIcon::before{margin: 10px 0 14px;}
+    #burgerIcon::after{margin: 0 0 10px;}
+    #clickedBurger:checked + label > div > #burgerIcon::before {transform: translateY(-8px) rotate(45deg);}
+    #clickedBurger:checked + label > div > #burgerIcon::after {transform: translateY(8px) rotate(-45deg);}
+    #clickedBurger:checked + label > div > #burgerIcon{transform: translateX(7px);}
+  </style>
+  <input type="checkbox" id="clickedBurger" style="display: none"/>
+  <label for="clickedBurger" style="cursor:pointer">
+    <div style="width: 50px; height: 50px; display:flex; align-items: center">
+      <div id="burgerIcon"></div>
+    </div>
+  </label>
+</div>
